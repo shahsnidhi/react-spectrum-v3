@@ -1,0 +1,28 @@
+
+.v-stack {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.h-stack {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+/* can't do this one because it cuts off the text in the e-mails
+also can't not do it, because then the avatars get squished...
+.v-stack *, .h-stack * {
+  flex: 0 0 auto;
+}
+*/
+
+/* bad name, maybe should be inline style? */
+.center {
+  align-items: center;
+}
+
+.spacer {
+  flex: 1 0 auto;
+}

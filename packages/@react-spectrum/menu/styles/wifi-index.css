@@ -1,0 +1,27 @@
+/* still creating css for each type */
+
+.spectrum-Menu {
+  border: 1px solid red;
+  background: azure;
+}
+
+.spectrum-Menu > * {
+  padding: 5px;
+  border-bottom: 1px solid black;
+  max-height: 100px;
+}
+
+.spectrum-Menu span {
+  color: purple;
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* this is less than ideal... there could be other inputs with labels, not just switch */
+/* must use inline-end so we get enough specificity to override the switches default css */
+.spectrum-Menu label {
+  margin-inline-end: 0;
+}
+
