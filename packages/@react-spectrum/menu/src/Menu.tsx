@@ -8,12 +8,9 @@ export interface MenuProps {
   children?: ReactNode
 }
 
-interface ItemCollectionContext {
-}
+export let ItemContext = React.createContext(null);
 
-const ItemContext = React.createContext<ItemCollectionContext | null>(null);
-
-export function useItemProvider(): ItemCollectionContext {
+export function useItemProvider() {
   return useContext(ItemContext);
 }
 
@@ -23,7 +20,18 @@ export const Menu = React.forwardRef((props: MenuProps, ref: RefObject<HTMLEleme
 
   return (
     <div {...filterDOMProps(completeProps)} ref={ref} className={classNames(styles, 'spectrum-Menu')}>
-      {props.children}
+      <ItemContext.Provider
+        value={{
+          avatar: classNames(styles, 'avatar'),
+          heading: classNames(styles, 'heading'),
+          text: classNames(styles, 'text'),
+          section: classNames(styles, 'section'),
+          spacer: classNames(styles, 'spacer'),
+          item: classNames(styles, 'item'),
+          keyboard: classNames(styles, 'keyboard')
+        }}>
+        {props.children}
+      </ItemContext.Provider>
     </div>
   );
 });

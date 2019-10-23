@@ -5,12 +5,14 @@ import {useProviderProps} from '@react-spectrum/provider';
 import styles from '../styles/semanticElems.css';
 import {useItemProvider} from './Menu';
 
-export const Avatar = React.forwardRef((props, ref: RefObject<HTMLElement>) => {
+export const Keyboard = React.forwardRef((props, ref: RefObject<HTMLElement>) => {
   let defaults = {};
   let completeProps = Object.assign({}, defaults, useProviderProps(props));
-  let { avatar } = useItemProvider();
+  let { keyboard } = useItemProvider();
 
   return (
-    <img {...filterDOMProps(completeProps)} ref={ref} className={classNames(styles, avatar, props.className)} src={props.src} />
+    <kbd {...filterDOMProps(completeProps)} ref={ref} className={classNames(styles, keyboard, props.className)}>
+      {props.children}
+    </kbd>
   );
 });

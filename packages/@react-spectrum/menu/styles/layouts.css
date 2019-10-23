@@ -26,3 +26,15 @@ also can't not do it, because then the avatars get squished...
 .spacer {
   flex: 1 0 auto;
 }
+
+/* meant to be applied to things with content, this will cause it to start with width of 0 and grow until it can't
+as opposed to 1 0 auto, which will start at the width of it's content, and then grow until it can't, this can cause weird overflows
+*/
+.h-grow {
+  flex: 1 0 0;
+}
+
+/* don't know the trick yet, haven't run into use case yet, look here https://stackoverflow.com/questions/36230944/prevent-flex-items-from-overflowing-a-container */
+.v-grow {
+  flex: 1 0 0;
+}

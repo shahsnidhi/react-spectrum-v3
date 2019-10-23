@@ -1,35 +1,54 @@
 
 .spectrum-Menu {
   border: 1px solid red;
-  background: azure;
+  background: white;
 }
 
 /* gah, slow selectors */
 .spectrum-Menu > * {
   padding: 5px;
   border-bottom: 1px solid black;
-  max-height: 100px;
 }
 
-.spectrum-Menu h1 {
+.spectrum-Menu .heading {
   margin: 0;
-  color: purple;
+  color: #4B4B4B;
   font-size: 24px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.spectrum-Menu section {
- color: darkgreen;
+.spectrum-Menu .section {
+ color: #707070;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
-.spectrum-Menu img {
+.spectrum-Menu .text {
+  color: #4B4B4B;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.spectrum-Menu .text + * {
+  padding: 0 0 0 5px;
+}
+
+.spectrum-Menu .avatar {
   height: 30px;
   width: 30px;
   margin: 10px 10px 10px 5px;
+  flex: 0 0 auto;
+}
+
+.spectrum-Menu .keyboard {
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  background: #efefef;
+  flex: 0 0 auto;
 }
