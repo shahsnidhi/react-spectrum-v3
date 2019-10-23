@@ -22,13 +22,11 @@ export const Menu = React.forwardRef((props: MenuProps, ref: RefObject<HTMLEleme
     <div {...filterDOMProps(completeProps)} ref={ref} className={classNames(styles, 'spectrum-Menu')}>
       <ItemContext.Provider
         value={{
-          avatar: classNames(styles, 'avatar'),
-          heading: classNames(styles, 'heading'),
-          text: classNames(styles, 'text'),
-          section: classNames(styles, 'section'),
-          spacer: classNames(styles, 'spacer'),
-          item: classNames(styles, 'item'),
-          keyboard: classNames(styles, 'keyboard')
+          container: classNames(styles, 'container'),
+          icon: classNames(styles, 'icon'),
+          label: classNames(styles, 'label'),
+          description: classNames(styles, 'description'),
+          tools: classNames(styles, 'tools')
         }}>
         {props.children}
       </ItemContext.Provider>

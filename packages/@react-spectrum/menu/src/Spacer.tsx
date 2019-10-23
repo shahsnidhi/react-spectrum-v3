@@ -9,9 +9,8 @@ import {useItemProvider} from "./Menu";
 export const Spacer = React.forwardRef((props, ref: RefObject<HTMLElement>) => {
   let defaults = {};
   let completeProps = Object.assign({}, defaults, useProviderProps(props));
-  let { spacer } = useItemProvider();
 
   return (
-    <div {...filterDOMProps(completeProps)} ref={ref} className={classNames(styles, spacer, props.className)} />
+    <div {...filterDOMProps(completeProps)} ref={ref} className={classNames(styles, 'spacer', props.className)} />
   );
 });

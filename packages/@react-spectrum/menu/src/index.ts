@@ -10,3 +10,4 @@ export * from './WifiMenu';
 export * from './Text';
 export * from './Spacer';
 export * from './Keyboard';
+export * from './Slot';

@@ -8,9 +8,9 @@ import {useItemProvider} from './Menu';
 export const Avatar = React.forwardRef((props, ref: RefObject<HTMLElement>) => {
   let defaults = {};
   let completeProps = Object.assign({}, defaults, useProviderProps(props));
-  let { avatar } = useItemProvider();
+  let {[props.slot]: slotClass} = useItemProvider();
 
   return (
-    <img {...filterDOMProps(completeProps)} ref={ref} className={classNames(styles, avatar, props.className)} src={props.src} />
+    <img {...filterDOMProps(completeProps)} ref={ref} className={classNames(styles, slotClass, props.className)} src={props.src} />
   );
 });

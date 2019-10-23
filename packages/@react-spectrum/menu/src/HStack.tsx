@@ -8,7 +8,6 @@ export const HStack = React.forwardRef((props, ref: RefObject<HTMLElement>) => {
   let defaults = {};
   let completeProps = Object.assign({}, defaults, useProviderProps(props));
 
-  console.log(styles);
   return (
     <div {...filterDOMProps(completeProps)} ref={ref} className={classNames(styles, 'h-stack', {'center': props['align-items'] === 'center'}, props.className)}>
       {React.Children.toArray(props.children).map(child => {
