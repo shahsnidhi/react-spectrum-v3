@@ -1,5 +1,5 @@
 export * from './Menu';
-export * from './Item';
+export * from './MenuItem';
 export * from './Detail';
 export * from './Heading';
 export * from './HStack';
@@ -11,3 +11,5 @@ export * from './Text';
 export * from './Spacer';
 export * from './Keyboard';
 export * from './Slot';
+export * from './Card';
+export * from './Grid';

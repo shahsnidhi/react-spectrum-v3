@@ -1,0 +1,40 @@
+
+.container {
+  display: grid;
+  grid-template-columns: 14px auto 1fr 1fr 14px;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    ".       avatar     title    title     ."
+    ".       body       body     body      ."
+    "preview preview    preview  preview   preview"
+    ".       footer     footer   footer    .";
+}
+
+
+.avatar {
+  grid-area: avatar;
+  align-self: center;
+  height: 48px;
+  width: 48px;
+  margin-right: 5px;
+}
+
+.title {
+  grid-area: title;
+  align-self: center;
+  margin: 5px 0;
+}
+
+.body {
+  grid-area: body;
+}
+
+.preview {
+  grid-area: preview;
+  height: 200px;
+}
+
+.footer {
+  grid-area: footer;
+  margin-bottom: 5px;
+}
