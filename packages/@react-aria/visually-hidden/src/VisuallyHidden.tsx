@@ -10,6 +10,9 @@
  * governing permissions and limitations under the License.
  */
 
+// To get the type definiton for "*.css"
+///<reference types="@react-types/shared" />
+
 import classNames from 'classnames';
 import React, {HTMLAttributes, JSXElementConstructor, ReactNode} from 'react';
 import styles from './VisuallyHidden.css';
@@ -19,11 +22,11 @@ interface VisuallyHiddenProps extends HTMLAttributes<HTMLElement> {
   children: ReactNode,
 
   /**
-   * The element type for the container 
+   * The element type for the container
    * @default 'div'
    */
   elementType?: string | JSXElementConstructor<any>,
-  
+
   /** Whether the content can be focused */
   isFocusable?: boolean
 }
@@ -40,13 +43,13 @@ export function VisuallyHidden(props: VisuallyHiddenProps) {
     isFocusable,
     ...otherProps
   } = props;
-  
+
   className = classNames(
     styles['u-react-spectrum-screenReaderOnly'],
-    {[styles['is-focusable']]: isFocusable},
+    { [styles['is-focusable']]: isFocusable },
     className
   );
-    
+
   return (
     <Element
       className={className}
